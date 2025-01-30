@@ -1,0 +1,53 @@
+/* Main container */
+.post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Post card */
+.post-card {
+    width: 500px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* User header section */
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+/* User avatar */
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 2px solid #fff;
+}
+
+/* User info */
+.user-info {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+/* User name */
+.user-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* User metadata (ID and time) */
+.user-meta {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+    color: gray;
+}

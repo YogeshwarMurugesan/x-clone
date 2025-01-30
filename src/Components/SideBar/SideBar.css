@@ -1,0 +1,157 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar Container */
+.sidebar {
+    background-color: #1a1a1a;  /* Dark gray */
+    height: 100vh;
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    transition: width 0.3s ease-in-out;
+    flex-shrink: 0; /* Prevents sidebar from growing */
+}
+
+/* Ensure small sidebar applies correctly */
+.small-sidebar {
+    width: 80px !important;  /* Shrinks when screen is small */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hide sidebar text in small mode */
+.small-sidebar .sidebar-text {
+    display: none;
+}
+
+/* Center icons properly */
+.small-sidebar .sidebar-item {
+    justify-content: center;
+}
+
+.small-sidebar .sidebar-icon {
+    margin-right: 0; /* Remove spacing for small mode */
+}
+
+
+/* Twitter X Logo */
+.xlogo {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Sidebar List */
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list ul {
+    width: 100%;
+    padding: 0;
+}
+
+.list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sidebar Icons */
+.sidebar-icon {
+    font-size: 22px;
+    margin-right: 12px;
+}
+
+/* Hide Sidebar Text on Small Screens */
+.small-sidebar .sidebar-text {
+    display: none;
+}
+
+/* Post Button */
+.postButton {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    display: block;
+    text-align: center;
+}
+
+.postButton:hover {
+    background-color: #0d8ddb;
+}
+
+/* User Section */
+.user {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Profile Button */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:none;
+    border: none;
+    padding: 10px;  
+    width: 90%;
+    cursor: pointer;
+    border-radius: 50px;
+    color: whitesmoke;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+}
+
+/* Profile Image */
+.profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* margin-right: 10px; */
+}
+
+/* Hide Profile Name on Small Screens */
+.small-sidebar .profile h5 {
+    display: none;
+}
+
+.sidebar-link{
+   text-decoration: none;
+}
