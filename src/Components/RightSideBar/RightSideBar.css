@@ -11,7 +11,8 @@
     border-radius: 8px;
     padding: 20px;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.404);
+    border: 1px solid rgb(107, 107, 107);
+    
   }
   
   .suggestions {
@@ -23,7 +24,7 @@
     align-items: center;
     margin-bottom: 15px;
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(107, 107, 107);
   }
   
   .user-image {

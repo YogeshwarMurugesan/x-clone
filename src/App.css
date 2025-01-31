@@ -57,7 +57,7 @@
   }
 
 /* Responsive Design: Hide Right Sidebar on Small Screens */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .right-sidebar {
     display: none; /* Hide the right sidebar on small screens */
   }
