@@ -1,73 +1,90 @@
-.container-fluid{
+/* General Styles */
+.container-fluid {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* background-color: #f9f9f9; */
+  background-color: black; /* Light background for better contrast */
   font-family: 'Arial', sans-serif;
-  padding: 0px;
+  padding: 0;
 }
 
+/* Header Styles */
 .header {
-  /* background-color: blue; */
   height: 8vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  background-color: black; /* White background for header */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 0 20px;
-  border-bottom: 1px solid rgb(107, 107, 107);
-
+  border-bottom: 1px solid #e1e8ed; /* Light border */
 }
 
 .header .col {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600; /* Slightly bolder font */
   color: #1da1f2;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 20px; /* Rounded corners for tabs */
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.header .col:hover {
+  background-color: rgba(29, 161, 242, 0.1); /* Light blue hover effect */
+}
+
+.active-tab {
+  font-weight: bold;
+  color: #1da1f2;
+  position: relative;
+}
+
+.active-tab::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  background-color: #1da1f2;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+/* Post Input Section */
 .post {
   display: flex;
   justify-content: center;
-  /* padding: 20px; */
+  padding: 20px;
+  background-color: black; /* White background for post section */
+  border-bottom: 1px solid #e1e8ed75; /* Light border */
 }
 
 .postInputs {
-  /* background-color: red; */
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-bottom: 1px solid rgb(107, 107, 107);
-
+  max-width: 600px; /* Limit width for better readability */
+  border-radius: 12px; /* Rounded corners */
+  /* padding: 20px; */
+  background-color: black; /* White background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-hr{
-    width: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* .postInputs input {
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  padding: 10px 15px;
+.postInputs input {
+  background-color: transparent;
+  border: none;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px; /* Larger font size */
+  padding: 10px;
   margin-bottom: 15px;
-  outline: none;
-  transition: all 0.3s ease;
-} */
-
-.postInputs input{
-    background-color: transparent;
-    border: none;
-    width: 50%;
-    
 }
+
 .postInputs input:focus {
- border: none;
- outline: none;
+  outline: none;
 }
 
 .img-fluid {
@@ -75,38 +92,37 @@ hr{
   height: 50px;
   border-radius: 50%;
   margin-right: 15px;
-  background-color: white;
+  border: 2px solid #e1e8ed; /* Light border for avatar */
 }
 
 .postImages {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: space-between;
-  /* background-color: aqua; */
+  margin-top: 15px;
 }
 
 .icons {
   color: #1da1f2;
-  font-size: 30px;
+  font-size: 24px; /* Slightly smaller icons */
   cursor: pointer;
-  margin: 10px;
+  margin: 0 10px;
   transition: all 0.3s ease;
 }
 
 .icons:hover {
   color: #0d95e8;
-  transform: scale(1.2);
+  transform: scale(1.1); /* Slight scale effect on hover */
 }
 
 .emoji-picker {
   display: flex;
   margin-top: 10px;
+  gap: 10px; /* Space between emojis */
 }
 
 .emoji {
-  font-size: 30px;
-  margin: 5px;
+  font-size: 24px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -115,78 +131,27 @@ hr{
   transform: scale(1.2);
 }
 
-.selected-emoji {
-  font-size: 16px;
-  color: #333;
-  margin-top: 10px;
-}
-
 .file-preview {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 8px;
   margin-top: 15px;
+  border: 1px solid #e1e8ed; /* Light border for image preview */
 }
 
-.post-btn {
-  background-color: #1da1f2;
-  color: white;
+.poButton {
+  width: 100px;
+  border-radius: 25px; /* Rounded button */
+  background-color: #1da1f2; /* Blue background */
+  color: #ffffff; /* White text */
+  font-weight: bold;
   border: none;
-  padding: 12px 20px;
-  border-radius: 25px;
+  padding: 10px;
   cursor: pointer;
-  font-size: 16px;
-  margin-top: 15px;
   transition: background-color 0.3s ease;
 }
 
-.post-btn:hover {
-  background-color: #0d95e8;
-}
-
-.post-btn:active {
-  background-color: #0a74d1;
-}
-
-.poButton{
-    width: 100px;
-    border-radius: 50px;
-}
-
-.forYouCol, .followingCol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-}
-
-.forYouCol:hover, .followingCol:hover {
-    background-color: rgba(209, 204, 204, 0.123);
-}
-
-.active-tab {
-    font-weight: bold;
-    color: #1da1f2;
-}
-
-.active-tab::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 50%;
-    height: 3px;
-    background-color: #1da1f2;
-    border-radius: 2px;
-    transform: translateX(-50%);
-    transition: width 0.3s ease-in-out;
-}
-
-.active-tab:hover::after {
-    width: 60%;
+.poButton:hover {
+  background-color: #0d95e8; /* Darker blue on hover */
 }

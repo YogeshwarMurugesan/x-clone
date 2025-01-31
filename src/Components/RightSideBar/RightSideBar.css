@@ -1,0 +1,74 @@
+.RightSidebar {    
+    width: 300px;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .card {
+    background-color: black;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.404);
+  }
+  
+  .suggestions {
+    margin-top: 10px;
+  }
+  
+  .suggestion-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .user-username {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .follow-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .follow-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .follow-btn:focus {
+    outline: none;
+  }
+  
+  .card h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  

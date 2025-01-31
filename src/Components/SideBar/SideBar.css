@@ -131,7 +131,7 @@
     cursor: pointer;
     border-radius: 50px;
     color: whitesmoke;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
 .profile:hover {

@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import Profile from './Components/Profile';
 import Settings from './Components/Settings';
 import Notification from './Components/Notification';
+import RightSidebar from './Components/RightSideBar/RightSideBar';
 import './App.css';
 
 const App = () => {
@@ -19,6 +20,9 @@ const App = () => {
             <Route path="/settings" element={<Settings />} />
             <Route path="/notification" element={<Notification />} />
           </Routes>
+        </div>
+        <div className="right-sidebar">
+          <RightSidebar />
         </div>
       </div>
     </Router>

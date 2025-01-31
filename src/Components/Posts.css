@@ -3,127 +3,131 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 20px; */
-}
-
-/* Post card */
-.post-card {
-    width: 100%;
-    /* background-color: #1a1a1a; */
-    color: white;
-    border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease-in-out;
-    border: 1px solid rgba(105, 105, 105, 0.685);
-
-}
-
-    /* .post-card:hover {
-        transform: scale(1.02);
-    } */
-
-/* User header section */
-.post-header {
+    background-color: black; /* Light background for contrast */
+  }
+  
+  /* Post card */
+  .post-card {
+    width: 100%;
+    
+    background-color: black; /* White background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space between posts */
+    border: 1px solid #e1e8ed9f; /* Light border */
+    color: white;
+  }
+  
+  /* User header section */
+  .post-header {
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* User avatar */
-.user-avatar {
+    border-bottom: 1px solid #e1e8ed96; /* Light border */
+  }
+  
+  /* User avatar */
+  .user-avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 12px;
-    border: 2px solid rgb(105, 105, 105);
-}
-
-/* User info */
-.user-info {
+    border: 2px solid #e1e8ed; /* Light border */
+  }
+  
+  /* User info */
+  .user-info {
     display: flex;
-    /* flex-direction: column; */
-}
-
-/* User name */
-.user-name {
+    align-items: center;
+    gap: 5px; /* Space between elements */
+    color: white;
+  }
+  
+  /* User name */
+  .user-name {
     margin: 0;
     font-size: 16px;
     font-weight: bold;
-}
-
-/* User metadata (ID and time) */
-.user-meta {
+    color: #14171a; /* Dark text for better readability */
+  }
+  
+  /* User metadata (ID and time) */
+  .user-meta {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
     font-size: 14px;
-    color: gray;
-}
-
-/* Post content */
-.contentRow {
+    color: #657786; /* Gray text */
+    margin-top: 10px;
+  }
+  
+  /* Post content */
+  .contentRow {
     padding-left: 60px;
     font-size: 15px;
     line-height: 1.6;
-    color: #ddd;
-}
-
-/* Post image */
-.postRow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.posts {
-    padding: 10px;
-    height: 50vh;
-    width: 80%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Reactions row */
-.reactionRow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #14171a; /* Dark text */
     margin-top: 10px;
-}
-
-.reactSpan {
+  }
+  
+  /* Post image */
+  .postRow {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-}
-
-/* Reaction icons */
-.reactSpan .like, 
-.reactSpan .comment {
-    font-size: 22px;
+    justify-content: center;
+    border-radius: 12px; /* Rounded corners */
+    margin-top: 15px;
+  }
+  
+  .posts {
+    width: 100%;
+    max-height: 400px; /* Limit height */
+    border-radius: 12px; /* Rounded corners */
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Reactions row */
+  .reactionRow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left */
+    margin-top: 15px;
+    padding-left: 60px;
+  }
+  
+  .reactSpan {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+  }
+  
+  /* Reaction icons */
+  .reactSpan .like,
+  .reactSpan .comment {
+    font-size: 20px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    /* padding: 8px; */
-    border-radius: 50%;
-}
+    color: #657786; /* Gray icons */
+    transition: all 0.3s ease;
+  }
 
+/* Like Icon Hover */
 .reactSpan .like:hover {
-    background-color: rgba(250, 25, 130, 0.822);
-    color: rgb(241, 14, 120);
-    padding: 1px;
-}
-
-.reactSpan .comment:hover {
-    background-color: rgba(16, 148, 236, 0.842);
-    color: rgb(29, 155, 240);
-    padding: 1px;
-
-}
+    color: #e0245e; /* Red on hover */
+    background-color:#e0245e ;
+    background-color: rgba(224, 36, 94, 0.1); /* Light red background */
+    border-radius: 50%; /* Circular background */
+    padding: 1px; /* Add padding for better visibility */
+  }
+  
+  /* Comment Icon Hover */
+  .reactSpan .comment:hover {
+    color: #1da1f2; /* Blue on hover */
+    background-color: rgba(29, 161, 242, 0.1); /* Light blue background */
+    border-radius: 50%; /* Circular background */
+    padding: 1px; /* Add padding for better visibility */
+  }

@@ -51,7 +51,7 @@ const Posts = () => {
           <div className="post-header">
             <img className="user-avatar" src={postImage} alt="User Avatar" />
             <div className="user-info">
-              <h6 className="user-name me-3">{post.userName}</h6>
+              <h6 className="user-name me-3 text-white">{post.userName}</h6>
               <div className="user-meta">
                 <p className="user-id text-secondary">{post.userId} •</p>
                 <p className="post-time text-secondary">{post.time}</p>
