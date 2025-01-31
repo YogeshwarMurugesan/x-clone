@@ -2,7 +2,7 @@
 import React from 'react';
 import './SideBar.css';
 import { RiTwitterXLine } from "react-icons/ri";
-import avatar from './—Pngtree—avatar icon profile icon member_5247852.png';
+import avatar from '../assets/BuzzFeed.jpg';
 import sidebardata from './sidebardata';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
@@ -27,7 +27,7 @@ const SideBar = () => {
             </Link>
           ))}
         </ul>
-        <button className="btn btn-light postButton">
+        <button className="btn  postButton">
           {!isSmallScreen ? "Post" : "+"}
         </button>
       </div>

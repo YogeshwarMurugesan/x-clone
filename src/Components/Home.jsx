@@ -1,7 +1,7 @@
 // Home.js
 import React, { useState } from 'react';
 import './Home.css';
-import avatar from './SideBar/—Pngtree—avatar icon profile icon member_5247852.png';
+import avatar from './assets/BuzzFeed.jpg';
 import { FaRegImage } from "react-icons/fa";
 import { MdEmojiEmotions } from "react-icons/md";
 import Posts from './Posts';
