@@ -48,41 +48,41 @@ const Posts = () => {
   return (
     <div className="post-container">
       <div className="row">
-          <div className="col">
+        <div className="col">
           {postsData.map((post) => (
-        <div key={post.id} className="post-card">
-          <div className="post-header">
-            <img className="user-avatar" src={postImage} alt="User Avatar" />
-            <div className="user-info">
-              <h6 className="user-name me-3 text-white">{post.userName}</h6>
-              <div className="user-meta">
-                <p className="user-id text-secondary">{post.userId} •</p>
-                <p className="post-time text-secondary">{post.time}</p>
+            <div key={post.id} className="post-card">
+              <div className="post-header">
+                <img className="user-avatar" src={postImage} alt="User Avatar" />
+                <div className="user-info">
+                  <h6 className="user-name me-3 text-white">{post.userName}</h6>
+                  <div className="user-meta">
+                    <p className="user-id text-secondary">{post.userId} •</p>
+                    <p className="post-time text-secondary">{post.time}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="card-body">
-            <div className="row contentRow">
-              <p>{post.text}</p>
-            </div>
-            {post.image && (
-              <div className="row postRow">
-                <img className="posts" src={post.image} alt="Post Content" />
-              </div>
-            )}
-            <div className="row reactionRow">
-              <span className="p-3 reactSpan">
-                <FaRegComment className="comment" />
+              <div className="card-body">
+                <div className="row contentRow">
+                  <p>{post.text}</p>
+                </div>
+                {post.image && (
+                  <div className="row postRow">
+                    <img className="posts" src={post.image} alt="Post Content" />
+                  </div>
+                )}
+                <div className="row reactionRow">
+                  <span className="p-3 reactSpan">
+                    <FaRegComment className="comment" />
 
-                {isLiked ? <FaHeart className="like liked" onClick={() => setIsLiked(false)} /> : <FavoriteBorderIcon className="like" onClick={() => setIsLiked(true)} />}
-              </span>
+                    {isLiked ? <FaHeart className="like liked" onClick={() => setIsLiked(false)} /> : <FavoriteBorderIcon className="like" onClick={() => setIsLiked(true)} />}
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-      ))}
-          </div>
       </div>
-      
+
     </div>
   );
 };

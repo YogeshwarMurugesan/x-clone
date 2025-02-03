@@ -155,3 +155,11 @@
 .sidebar-link{
    text-decoration: none;
 }
+
+.modal-content{
+    background-color: black;
+}
+
+.modal-body{
+    border: none;
+}
