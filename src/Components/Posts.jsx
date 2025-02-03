@@ -14,7 +14,8 @@ const postsData = [
     userId: "@UserId",
     time: "20h",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae autem quo officia quae numquam cupiditate ea ex maiores quas vel ab, consequatur illo nobis voluptates impedit, earum facilis possimus unde.",
-    image: image
+    image: image,
+    isLiked: false
   },
   {
     id: 2,
@@ -22,7 +23,8 @@ const postsData = [
     userId: "@AnotherId",
     time: "5h",
     text: "This is another post content example with different text. React is amazing!",
-    image: image
+    image: image,
+    isLiked: true
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ const postsData = [
     userId: "@ThirdId",
     time: "1d",
     text: "Another example post showing dynamic rendering. Loving this feature!",
-    image: image
+    image: image,
+    isLiked: false 
   },
   {
     id: 4,
@@ -38,7 +41,8 @@ const postsData = [
     userId: "@FourthId",
     time: "1d",
     text: "Another example post showing dynamic rendering. Loving this feature!",
-    image: image
+    image: image,
+    isLiked: true
   }
 ];
 
@@ -73,8 +77,7 @@ const Posts = () => {
                 <div className="row reactionRow">
                   <span className="p-3 reactSpan">
                     <FaRegComment className="comment" />
-
-                    {isLiked ? <FaHeart className="like liked" onClick={() => setIsLiked(false)} /> : <FavoriteBorderIcon className="like" onClick={() => setIsLiked(true)} />}
+                    {post.isLiked ? <FaHeart className="like liked" onClick={() => setIsLiked(false)} /> : <FavoriteBorderIcon className="like" onClick={() => setIsLiked(true)} />}
                   </span>
                 </div>
               </div>
