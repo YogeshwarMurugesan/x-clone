@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .notifications-container {
+    /* max-width: 600px; */
+    margin: 0 auto;
+    /* border: 1px solid #e1e8ed; */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Header */
+  .notifications-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #14171a;
+  }
+  
+  /* Notification List */
+  .notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .notification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #e1e8ed;
+  }
+  
+  .notification:last-child {
+    border-bottom: none;
+  }
+  
+  .notification-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .notification-content {
+    flex: 1;
+  }
+  
+  .notification-content p {
+    margin: 0;
+    color: #14171a;
+  }
+  
+  .notification-content .notification-time {
+    font-size: 14px;
+    color: #657786;
+  }

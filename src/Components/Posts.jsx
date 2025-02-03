@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Posts.css';
 import postImage from './assets/BuzzFeed.jpg';
 import image from './assets/Realistic-X-Post-Generator.jpg';
 import { FaRegComment } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 // Example array of posts
@@ -42,6 +43,8 @@ const postsData = [
 ];
 
 const Posts = () => {
+
+  const [isLiked, setIsLiked] = useState(false);
   return (
     <div className="post-container">
       <div className="row">
@@ -70,7 +73,8 @@ const Posts = () => {
             <div className="row reactionRow">
               <span className="p-3 reactSpan">
                 <FaRegComment className="comment" />
-                <FavoriteBorderIcon className="like" />
+
+                {isLiked ? <FaHeart className="like liked" onClick={() => setIsLiked(false)} /> : <FavoriteBorderIcon className="like" onClick={() => setIsLiked(true)} />}
               </span>
             </div>
           </div>
